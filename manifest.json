@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Acessibilidade Total",
+  "version": "1.0.0",
+  "description": "Extensão que adiciona recursos de acessibilidade (TTS, alto contraste, ajuste de fonte e skip-links) a qualquer site.",
+  "icons": {
+    "48": "icons/icon48.png",                                            
+    "128": "icons/icon128.png" 
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles/high-contrast.css"]
+    }
+  ]
+}
+

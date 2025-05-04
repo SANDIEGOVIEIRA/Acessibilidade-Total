@@ -1,0 +1,24 @@
+/* Inverte cores de toda a página */
+.high-contrast-ext {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Texto sempre branco, fundos escuros */
+.high-contrast-ext,
+.high-contrast-ext body,
+.high-contrast-ext * {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Exclui mídias de qualquer inversão de cor */
+.high-contrast-ext img,
+.high-contrast-ext video,
+.high-contrast-ext svg,
+.high-contrast-ext picture,
+.high-contrast-ext canvas {
+  filter: none !important;
+}
+
+
+  
